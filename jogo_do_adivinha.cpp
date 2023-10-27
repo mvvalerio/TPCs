@@ -4,6 +4,7 @@
 using namespace std;
 
 int main(){
+srand ((unsigned) time (0));
 int numSorte = 1 + (rand()%100);
 int numTentativasMaximas = 0;
 int tentativas = 0;
@@ -26,13 +27,13 @@ while (numSorte != num && tentativas < numTentativasMaximas){
         } else if (numSorte < num){
             cout << "Tem de ser mais pequeno que:" << num << endl;
         } else {
-            cout << "Muito bem, acertaste !!" << endl;
+            cout << "Muito bem, acertaste " << nomeJogador << " !!" << endl;
             break;
         }
         tentativas++;
         }
         
-        if (tentativas = numTentativasMaximas){
+        if (tentativas == numTentativasMaximas){
             cout << "Estiveste muito perto " << nomeJogador <<", o número que tinhas de colocar era " << numSorte << "!" << endl; 
         }
         cout << "Acabou o jogo." << endl;
